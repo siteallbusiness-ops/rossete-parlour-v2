@@ -1,0 +1,30 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+.fill {
+  object-fit: cover;
+}
+
+.fit-cover {
+  object-fit: cover;
+}
+
+.fit-contain {
+  object-fit: contain;
+}
+
+.fit-fill {
+  object-fit: fill;
+}
+
+.wrapper {
+  aspect-ratio: 16 / 9;
+}

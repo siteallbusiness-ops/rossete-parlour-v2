@@ -1,0 +1,249 @@
+.header {
+  --title-stagger: 0.07s;
+  --title-base-delay: 0.05s;
+}
+
+.eyebrow {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--spacing-sm);
+}
+
+.title {
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 600px;
+}
+
+.letter {
+  display: inline-block;
+  transform: translateY(var(--offset-y, 0px));
+}
+
+.letterInner {
+  display: inline-block;
+}
+
+.letterLarge .letterInner {
+  position: relative;
+}
+
+.letterLarge .letterInner::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.05em;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-gold),
+    transparent
+  );
+  transform: scaleX(1);
+  transform-origin: center;
+}
+
+.titleRule {
+  display: block;
+  width: 3.5rem;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-gold) 20%,
+    var(--color-gold) 80%,
+    transparent
+  );
+}
+
+.lead {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-muted);
+}
+
+.space {
+  width: 0.5em;
+}
+
+/* Gallery variant */
+.gallery {
+  text-align: center;
+  max-width: 32rem;
+  margin-inline: auto;
+}
+
+.gallery .title {
+  justify-content: center;
+  gap: 0.1em;
+  font-family: var(--font-family-serif);
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary-dark);
+  margin-bottom: var(--spacing-md);
+  letter-spacing: 0.14em;
+  line-height: 1.1;
+}
+
+.gallery .letterLarge {
+  font-size: 1.4em;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.gallery .titleRule {
+  margin: 0 auto var(--spacing-md);
+}
+
+/* About variant */
+.about {
+  text-align: left;
+}
+
+.about .title {
+  gap: 0.15em;
+  font-family: var(--font-family-serif);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-dark);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.15;
+  letter-spacing: 0.06em;
+}
+
+.about .titleRule {
+  margin: 0 0 var(--spacing-lg);
+}
+
+.about .letter:nth-child(odd) .letterInner {
+  color: var(--color-primary);
+}
+
+/* Scroll-triggered animation (titles visible by default) */
+.visible .eyebrow {
+  animation: sectionTitleEyebrowIn 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.visible .letter {
+  animation: sectionTitleLetterReveal 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(var(--title-base-delay) + var(--i) * var(--title-stagger));
+}
+
+.visible .letterLarge .letterInner::after {
+  transform: scaleX(0);
+  animation: sectionTitleUnderlineGrow 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(
+    var(--title-base-delay) + var(--i) * var(--title-stagger) + 0.35s
+  );
+}
+
+.visible .titleRule {
+  width: 0;
+  opacity: 0;
+  animation: sectionTitleRuleExpand 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(
+    var(--title-base-delay) + var(--letter-count) * var(--title-stagger) + 0.15s
+  );
+}
+
+.visible .lead {
+  animation: sectionTitleLeadIn 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(var(--title-base-delay) + 0.55s);
+}
+
+.visible.about .letter:hover {
+  transform: translateY(calc(var(--offset-y, 0px) - 0.2rem)) rotateX(0deg) scale(1.02);
+  color: var(--color-primary);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), color 0.35s ease;
+}
+
+.visible .letter {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), color 0.35s ease;
+}
+
+@keyframes sectionTitleLetterReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(1.5rem) rotateX(52deg) scale(0.94);
+    filter: blur(3px);
+  }
+  55% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(var(--offset-y, 0px)) rotateX(0deg) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes sectionTitleEyebrowIn {
+  from {
+    opacity: 0;
+    transform: translateY(-0.75rem);
+    letter-spacing: 0.35em;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: 0.22em;
+  }
+}
+
+@keyframes sectionTitleRuleExpand {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 3.5rem;
+    opacity: 1;
+  }
+}
+
+@keyframes sectionTitleLeadIn {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sectionTitleUnderlineGrow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (max-width: 767px) {
+  .gallery .title {
+    letter-spacing: 0.08em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .visible .letter,
+  .visible .eyebrow,
+  .visible .titleRule,
+  .visible .lead,
+  .visible .letterLarge .letterInner::after {
+    animation: none !important;
+  }
+
+  .visible .titleRule {
+    width: 3.5rem;
+    opacity: 1;
+  }
+}

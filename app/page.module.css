@@ -1,0 +1,120 @@
+.landing {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  isolation: isolate;
+}
+
+.backgroundBase {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    #fdf9f7 0%,
+    #fbf4f2 35%,
+    #faf6f4 65%,
+    #fdf9f7 100%
+  );
+}
+
+.backgroundGlow {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(
+      ellipse 55% 45% at 8% 12%,
+      rgba(155, 125, 84, 0.12) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 50% 40% at 92% 8%,
+      rgba(103, 42, 50, 0.1) 0%,
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse 60% 50% at 85% 75%,
+      rgba(103, 42, 50, 0.08) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 45% 40% at 15% 85%,
+      rgba(155, 125, 84, 0.1) 0%,
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse 70% 35% at 50% 50%,
+      rgba(255, 255, 255, 0.65) 0%,
+      transparent 75%
+    );
+}
+
+.bubbleBackground {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.95;
+  background-image:
+    /* Soft filled bubbles */
+    radial-gradient(circle 26px at 5% 10%, rgba(103, 42, 50, 0.09) 99%, transparent 100%),
+    radial-gradient(circle 44px at 20% 25%, rgba(103, 42, 50, 0.06) 99%, transparent 100%),
+    radial-gradient(circle 18px at 35% 8%, rgba(155, 125, 84, 0.12) 99%, transparent 100%),
+    radial-gradient(circle 56px at 50% 18%, rgba(103, 42, 50, 0.05) 99%, transparent 100%),
+    radial-gradient(circle 22px at 65% 12%, rgba(103, 42, 50, 0.08) 99%, transparent 100%),
+    radial-gradient(circle 38px at 82% 28%, rgba(155, 125, 84, 0.07) 99%, transparent 100%),
+    radial-gradient(circle 16px at 94% 10%, rgba(103, 42, 50, 0.1) 99%, transparent 100%),
+    radial-gradient(circle 30px at 12% 45%, rgba(103, 42, 50, 0.07) 99%, transparent 100%),
+    radial-gradient(circle 62px at 30% 55%, rgba(103, 42, 50, 0.05) 99%, transparent 100%),
+    radial-gradient(circle 20px at 48% 42%, rgba(155, 125, 84, 0.09) 99%, transparent 100%),
+    radial-gradient(circle 42px at 68% 58%, rgba(103, 42, 50, 0.06) 99%, transparent 100%),
+    radial-gradient(circle 14px at 88% 48%, rgba(103, 42, 50, 0.09) 99%, transparent 100%),
+    radial-gradient(circle 36px at 8% 72%, rgba(155, 125, 84, 0.08) 99%, transparent 100%),
+    radial-gradient(circle 52px at 25% 82%, rgba(103, 42, 50, 0.05) 99%, transparent 100%),
+    radial-gradient(circle 24px at 45% 78%, rgba(103, 42, 50, 0.07) 99%, transparent 100%),
+    radial-gradient(circle 48px at 62% 88%, rgba(155, 125, 84, 0.06) 99%, transparent 100%),
+    radial-gradient(circle 18px at 78% 72%, rgba(103, 42, 50, 0.08) 99%, transparent 100%),
+    radial-gradient(circle 34px at 92% 85%, rgba(103, 42, 50, 0.06) 99%, transparent 100%),
+    /* Ring outline bubbles */
+    radial-gradient(circle 64px at 10% 32%, transparent 91%, rgba(103, 42, 50, 0.1) 92%, rgba(103, 42, 50, 0.1) 95%, transparent 96%),
+    radial-gradient(circle 78px at 38% 38%, transparent 92%, rgba(155, 125, 84, 0.12) 93%, rgba(155, 125, 84, 0.12) 96%, transparent 97%),
+    radial-gradient(circle 54px at 72% 35%, transparent 90%, rgba(103, 42, 50, 0.1) 91%, rgba(103, 42, 50, 0.1) 94%, transparent 95%),
+    radial-gradient(circle 70px at 88% 55%, transparent 91%, rgba(155, 125, 84, 0.11) 92%, rgba(155, 125, 84, 0.11) 95%, transparent 96%),
+    radial-gradient(circle 58px at 22% 65%, transparent 90%, rgba(103, 42, 50, 0.09) 91%, rgba(103, 42, 50, 0.09) 94%, transparent 95%),
+    radial-gradient(circle 72px at 55% 62%, transparent 92%, rgba(155, 125, 84, 0.1) 93%, rgba(155, 125, 84, 0.1) 96%, transparent 97%),
+    radial-gradient(circle 46px at 75% 78%, transparent 89%, rgba(103, 42, 50, 0.1) 90%, rgba(103, 42, 50, 0.1) 93%, transparent 94%),
+    radial-gradient(circle 60px at 42% 92%, transparent 91%, rgba(155, 125, 84, 0.09) 92%, rgba(155, 125, 84, 0.09) 95%, transparent 96%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+@media (max-width: 767px) {
+  .bubbleBackground {
+    background-image:
+      radial-gradient(circle 20px at 8% 12%, rgba(103, 42, 50, 0.09) 99%, transparent 100%),
+      radial-gradient(circle 34px at 28% 22%, rgba(103, 42, 50, 0.06) 99%, transparent 100%),
+      radial-gradient(circle 14px at 55% 10%, rgba(155, 125, 84, 0.1) 99%, transparent 100%),
+      radial-gradient(circle 40px at 82% 18%, rgba(103, 42, 50, 0.07) 99%, transparent 100%),
+      radial-gradient(circle 24px at 15% 48%, rgba(103, 42, 50, 0.08) 99%, transparent 100%),
+      radial-gradient(circle 48px at 50% 52%, rgba(155, 125, 84, 0.07) 99%, transparent 100%),
+      radial-gradient(circle 18px at 85% 45%, rgba(103, 42, 50, 0.09) 99%, transparent 100%),
+      radial-gradient(circle 32px at 10% 78%, rgba(103, 42, 50, 0.06) 99%, transparent 100%),
+      radial-gradient(circle 44px at 45% 88%, rgba(155, 125, 84, 0.08) 99%, transparent 100%),
+      radial-gradient(circle 56px at 75% 72%, transparent 91%, rgba(103, 42, 50, 0.1) 92%, rgba(103, 42, 50, 0.1) 95%, transparent 96%),
+      radial-gradient(circle 50px at 30% 65%, transparent 90%, rgba(155, 125, 84, 0.1) 91%, rgba(155, 125, 84, 0.1) 94%, transparent 95%);
+  }
+}

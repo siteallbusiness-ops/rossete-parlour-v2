@@ -1,0 +1,142 @@
+.storeInfo {
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-xl);
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  padding: var(--spacing-lg) var(--container-padding);
+}
+
+.titleRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+}
+
+.title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-black);
+}
+
+.status {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+}
+
+.statusOpen {
+  color: var(--color-success);
+}
+
+.statusClosed {
+  color: var(--color-primary);
+}
+
+.address {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--spacing-md);
+  flex-shrink: 0;
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.dealsBtn,
+.collectionBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.dealsBtn svg,
+.collectionBtn svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.dealsBtn.active,
+.collectionBtn.active {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+
+.dealsBtn:hover,
+.collectionBtn:not(.active):hover {
+  background-color: var(--color-surface);
+}
+
+.timeCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  min-width: 7rem;
+}
+
+.timeValue {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+.timeLabel {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 767px) {
+  .inner {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .right {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .actions {
+    width: 100%;
+  }
+
+  .timeCard {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 479px) {
+  .title {
+    font-size: var(--font-size-lg);
+  }
+
+  .dealsBtn,
+  .collectionBtn {
+    flex: 1;
+    justify-content: center;
+  }
+}

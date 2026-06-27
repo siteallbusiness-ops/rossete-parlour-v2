@@ -1,0 +1,96 @@
+.logo {
+  display: inline-flex;
+  align-items: flex-start;
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.logo:hover {
+  opacity: 0.88;
+}
+
+.wordmark {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.45rem;
+}
+
+.name {
+  font-family: var(--font-family-serif);
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  color: var(--color-primary-dark);
+  white-space: nowrap;
+}
+
+.rule {
+  display: block;
+  width: 3.75rem;
+  height: 1px;
+  background-color: var(--color-gold);
+}
+
+.tagline {
+  font-family: var(--font-family-primary);
+  font-size: 0.625rem;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  line-height: 1;
+}
+
+/* Compact — order header, drawers */
+.wordmarkCompact {
+  gap: 0.3rem;
+}
+
+.wordmarkCompact .name {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.wordmarkCompact .rule {
+  width: 2.75rem;
+}
+
+/* Minimal — tight spaces, name only */
+.wordmarkMinimal .name {
+  font-size: var(--font-size-md);
+}
+
+/* Footer — on burgundy background */
+.footer .name {
+  color: var(--color-text-inverse);
+}
+
+.footer .rule {
+  background-color: var(--color-gold);
+}
+
+.footer .tagline {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+@media (max-width: 767px) {
+  .wordmarkCompact .rule {
+    width: 2.25rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .name {
+    font-size: 1.2rem;
+  }
+
+  .tagline {
+    font-size: 0.55rem;
+    letter-spacing: 0.18em;
+  }
+
+  .wordmarkCompact .name {
+    font-size: 0.95rem;
+  }
+}

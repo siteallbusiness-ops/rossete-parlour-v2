@@ -1,0 +1,18 @@
+.topBar {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-lg) var(--container-padding);
+  max-width: 100%;
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+@media (max-width: 479px) {
+  .topBar {
+    padding: var(--spacing-md);
+  }
+}

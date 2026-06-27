@@ -1,0 +1,207 @@
+{
+  "categories": [
+    {
+      "id": "cold-drinks",
+      "label": "Cold Drinks",
+      "items": [
+        { "id": "iced-karak-chai", "name": "Iced Karak Chai", "price": 2.99 },
+        { "id": "iced-coffee", "name": "Iced Coffee", "price": 3.99 },
+        { "id": "j20", "name": "J2O", "price": 1.75 },
+        { "id": "fruit-shoot", "name": "Fruit Shoot", "price": 1.0 },
+        { "id": "still-water", "name": "Still Water", "price": 1.3 },
+        { "id": "caramel-frappe", "name": "Caramel Frappe", "price": 4.5 },
+        { "id": "rubicon-mango", "name": "Rubicon Mango", "price": 1.2 },
+        { "id": "rubicon-passion", "name": "Rubicon Passion", "price": 1.2 },
+        { "id": "cookies-frappuccino", "name": "Cookies Frappuccino", "price": 4.5 },
+        { "id": "bubble-tea", "name": "Bubble Tea", "price": 5.5 },
+        { "id": "mix-bubble", "name": "Mix Bubble", "price": 5.99 }
+      ]
+    },
+    {
+      "id": "hot-drinks",
+      "label": "Hot Drinks",
+      "items": [
+        { "id": "karak-chai", "name": "Karak Chai", "price": 2.5 },
+        { "id": "americano", "name": "Americano", "price": 2.99 },
+        { "id": "cappuccino", "name": "Cappuccino", "price": 2.99 },
+        { "id": "latte", "name": "Latte", "price": 2.99 },
+        { "id": "belgian-hot-chocolate", "name": "Belgian Hot Chocolate", "price": 3.99 },
+        { "id": "belgian-hot-white-chocolate", "name": "Belgian Hot White Chocolate", "price": 3.99 },
+        { "id": "caramel-latte", "name": "Caramel Latte", "price": 3.99 },
+        { "id": "karak-chai-l", "name": "Karak Chai L", "price": 2.99 }
+      ]
+    },
+    {
+      "id": "milkshakes",
+      "label": "Milkshakes",
+      "items": [
+        { "id": "thick-shakes", "name": "Thick Shakes", "price": 4.5 },
+        { "id": "2-scoop-regular-shakes", "name": "2 Scoop Regular Shakes", "price": 4.5 },
+        { "id": "3-scoops-large-shakes", "name": "3 Scoops Large Shakes", "price": 5.5 },
+        { "id": "planet-shakes-m", "name": "Planet Shakes M", "price": 5.99 },
+        { "id": "planet-shakes-l", "name": "Planet Shakes L", "price": 6.99 }
+      ]
+    },
+    {
+      "id": "mocktails",
+      "label": "Mocktails",
+      "items": [
+        { "id": "mango-passion", "name": "Mango Passion", "price": 4.99 },
+        { "id": "limitless-lychee", "name": "Limitless Lychee", "price": 4.99 },
+        { "id": "strawberry-satisfier", "name": "Strawberry Satisfier", "price": 4.99 },
+        { "id": "virgin-mojito", "name": "Virgin Mojito", "price": 4.99 },
+        { "id": "ocean-breeze", "name": "Ocean Breeze", "price": 4.99 },
+        { "id": "melon-magnifico", "name": "Melon Magnifico", "price": 4.99 }
+      ]
+    },
+    {
+      "id": "american-pancakes",
+      "label": "American Pancakes",
+      "items": [
+        { "id": "ferrero-fantasy-american-pancakes", "name": "Ferrero Fantasy American Pancakes", "price": 7.99 },
+        { "id": "boujee-bueno-american-pancakes", "name": "Boujee Bueno American Pancakes", "price": 6.99 },
+        { "id": "oh-oreo-american-pancakes", "name": "OH Oreo! American Pancakes", "price": 6.99 },
+        { "id": "nutella-and-who-american-pancakes", "name": "Nutella And Who American Pancakes", "price": 5.99 },
+        { "id": "crazy-for-chocolate-american-pancakes", "name": "Crazy For Chocolate American Pancakes", "price": 5.99 },
+        { "id": "strawberry-sensation-american-pancakes", "name": "Strawberry Sensation American Pancakes", "price": 7.99 },
+        { "id": "beloved-biscoff-american-pancakes", "name": "Beloved Biscoff American Pancakes", "price": 6.99 },
+        { "id": "be-my-banoffee-american-pancakes", "name": "Be My Banoffee American Pancakes", "price": 6.99 }
+      ]
+    },
+    {
+      "id": "brownies",
+      "label": "Brownies",
+      "items": [
+        { "id": "oreo-blizzard-brownie", "name": "Oreo Blizzard Brownie", "price": 4.99 },
+        { "id": "classic-white-brownie", "name": "Classic White Brownie", "price": 4.99 },
+        { "id": "classic-milk-brownie", "name": "Classic Milk Brownie", "price": 4.99 },
+        { "id": "nu-nutella-brownie", "name": "Nu Nutella Brownie", "price": 4.99 },
+        { "id": "cadbury-dairy-milk-brownie", "name": "Cadbury Dairy Milk Brownie", "price": 4.99 },
+        { "id": "kinder-bueno-brownie", "name": "Kinder Bueno Brownie", "price": 4.99 }
+      ]
+    },
+    {
+      "id": "cakes",
+      "label": "Cakes",
+      "items": [
+        { "id": "red-velvet-cake", "name": "Red Velvet Cake", "price": 4.99 },
+        { "id": "chocolate-fudge-cake", "name": "Chocolate Fudge Cake", "price": 4.99 },
+        { "id": "oreo-cheesecake", "name": "Oreo Cheesecake", "price": 5.99 },
+        { "id": "strawberry-cheesecake", "name": "Strawberry Cheesecake", "price": 5.99 },
+        { "id": "ferrero-rocher-cheesecake", "name": "Ferrero Rocher Cheesecake", "price": 5.99 },
+        { "id": "vanilla-cheesecake", "name": "Vanilla Cheesecake", "price": 5.99 },
+        { "id": "classic-school-cake-with-custard", "name": "Classic School Cake With Custard", "price": 4.99 },
+        { "id": "rainbow-cake", "name": "Rainbow Cake", "price": 4.99 },
+        { "id": "biscoff-cheesecake", "name": "Biscoff Cheesecake", "price": 5.99 },
+        { "id": "concrete-cake", "name": "Concrete Cake", "price": 4.99 },
+        { "id": "pistachio-cheesecake", "name": "Pistachio Cheesecake", "price": 5.99 },
+        { "id": "matilda-cake", "name": "Matilda Cake", "price": 4.99 },
+        { "id": "crunch-cake", "name": "Crunch Cake", "price": 5.99 },
+        { "id": "cake-slice", "name": "Cake", "price": 1.5 },
+        { "id": "biscuits", "name": "Biscuits", "price": 1.5 }
+      ]
+    },
+    {
+      "id": "cookie-doughs",
+      "label": "Cookie Doughs",
+      "items": [
+        { "id": "the-milky-way", "name": "The Milky Way", "price": 5.99 },
+        { "id": "full-moon", "name": "Full Moon", "price": 5.99 },
+        { "id": "dark-night", "name": "Dark Night", "price": 5.99 },
+        { "id": "the-trio", "name": "The Trio", "price": 7.99 },
+        { "id": "bueno-cookie-dough", "name": "Bueno Cookie Dough", "price": 6.99 },
+        { "id": "oreo-cookie-dough", "name": "Oreo Cookie Dough", "price": 6.99 },
+        { "id": "red-velvet-cookie-dough", "name": "Red Velvet", "price": 7.99 }
+      ]
+    },
+    {
+      "id": "crepes",
+      "label": "Crepes",
+      "items": [
+        { "id": "ferrero-fantasy-crepe", "name": "Ferrero Fantasy Crepe", "price": 6.5 },
+        { "id": "oh-oreo-crepe", "name": "Oh Oreo Crepe", "price": 6.5 },
+        { "id": "boujee-bueno-crepe", "name": "Boujee Bueno Crepe", "price": 6.5 },
+        { "id": "nutella-and-who-crepe", "name": "Nutella and Who Crepe", "price": 5.99 },
+        { "id": "strawberry-sensation-crepe", "name": "Strawberry Sensation Crepe", "price": 6.5 },
+        { "id": "be-my-banoffee-crepe", "name": "Be My Banoffee Crepe", "price": 6.5 },
+        { "id": "crazy-for-chocolate-crepe", "name": "Crazy For Chocolate Crepe", "price": 5.99 },
+        { "id": "crepe-the-choice-is-yours", "name": "Crepe - The Choice is Yours", "price": 4.5 },
+        { "id": "beloved-biscoff-crepe", "name": "Beloved Biscoff Crepe", "price": 6.5 }
+      ]
+    },
+    {
+      "id": "donuts",
+      "label": "Donuts",
+      "items": [
+        { "id": "oh-so-oreo-donut", "name": "Oh So Oreo Donut", "price": 2.5 },
+        { "id": "ferrero-donut", "name": "Ferrero Donut", "price": 2.5 },
+        { "id": "biscoff-donut", "name": "Biscoff Donut", "price": 2.5 },
+        { "id": "duluxe-donuts", "name": "Duluxe Donuts", "price": 6.99 },
+        { "id": "bite-of-buono-donut", "name": "Bite Of Buono Donut", "price": 2.5 },
+        { "id": "perfect-pistachio-donut", "name": "Perfect Pistachio Donut", "price": 2.5 }
+      ]
+    },
+    {
+      "id": "gelato",
+      "label": "Gelato",
+      "items": [
+        { "id": "1-scoop-gelato", "name": "1 Scoop Gelato", "price": 1.99 },
+        { "id": "2-scoops-gelato", "name": "2 Scoops Gelato", "price": 3.5 },
+        { "id": "3-scoops-gelato", "name": "3 Scoops Gelato", "price": 4.99 },
+        { "id": "dubai-cho", "name": "Dubai Cho", "price": 3.99 },
+        { "id": "cone-ice-cream", "name": "Cone Ice Cream", "price": 2.5 }
+      ]
+    },
+    {
+      "id": "milkcake",
+      "label": "Milkcake",
+      "items": [
+        { "id": "pistachio-milkcake", "name": "Pistachio Milkcake", "price": 4.99 },
+        { "id": "lotus-milkcake", "name": "Lotus Milkcake", "price": 4.99 },
+        { "id": "oreo-milkcake", "name": "Oreo Milkcake", "price": 4.99 }
+      ]
+    },
+    {
+      "id": "sundaes",
+      "label": "Sundaes",
+      "items": [
+        { "id": "bubble-gum-bliss", "name": "Bubble Gum Bliss", "price": 6.99 },
+        { "id": "more-oreo", "name": "More Oreo", "price": 6.99 },
+        { "id": "ferrero-filler", "name": "Ferrero Filler", "price": 6.99 },
+        { "id": "straw-belly", "name": "Straw Belly", "price": 6.99 },
+        { "id": "bueno-blast", "name": "Bueno Blast", "price": 6.99 },
+        { "id": "fudge-fever", "name": "Fudge Fever", "price": 6.99 },
+        { "id": "you-are-minted", "name": "You Are Minted", "price": 6.99 },
+        { "id": "brownie-kunafa", "name": "Brownie Kunafa", "price": 7.99 },
+        { "id": "pistachio-kunafa", "name": "Pistachio Kunafa", "price": 6.99 },
+        { "id": "nutella-kunafa", "name": "Nutella Kunafa", "price": 6.99 }
+      ]
+    },
+    {
+      "id": "waffles",
+      "label": "Waffles",
+      "items": [
+        { "id": "ferrero-fantasy-waffle", "name": "Ferrero Fantasy Waffle", "price": 7.5 },
+        { "id": "oh-oreo-waffle", "name": "Oh Oreo Waffle", "price": 7.5 },
+        { "id": "boujee-bueno-waffle", "name": "Boujee Bueno Waffle", "price": 7.5 },
+        { "id": "nutella-and-who-waffle", "name": "Nutella and Who Waffle", "price": 6.5 },
+        { "id": "strawberry-sensation-waffle", "name": "Strawberry Sensation Waffle", "price": 7.99 },
+        { "id": "be-my-banoffee-waffle", "name": "Be My Banoffee Waffle", "price": 7.5 },
+        { "id": "crazy-for-chocolate-waffle", "name": "Crazy for Chocolate Waffle", "price": 6.5 },
+        { "id": "waffle-the-choice-is-yours", "name": "Waffle - The Choice is Yours", "price": 4.99 },
+        { "id": "beloved-biscoff-waffle", "name": "Beloved Biscoff Waffle", "price": 7.5 },
+        { "id": "planet-special", "name": "Planet Special", "price": 8.99 }
+      ]
+    },
+    {
+      "id": "kids",
+      "label": "Kids",
+      "items": [
+        { "id": "marshmallows-with-choc", "name": "Marshmallows With Choc", "price": 3.99 },
+        { "id": "choc-strawberries", "name": "Choc Strawberries", "price": 3.99 },
+        { "id": "kids-milkshake", "name": "Kids Milkshake", "price": 3.49 },
+        { "id": "mini-donut-box", "name": "Mini Donut Box", "price": 4.49 }
+      ]
+    }
+  ]
+}
