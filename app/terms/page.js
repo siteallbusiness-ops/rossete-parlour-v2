@@ -65,8 +65,7 @@ export default function TermsPage() {
 
       <h2>Contact</h2>
       <p>
-        For questions about these terms, contact us at {SITE.email} or visit us at{" "}
-        {SITE.fullAddress}.
+        For questions about these terms, contact us at {SITE.email}.
       </p>
     </LegalPage>
   );
