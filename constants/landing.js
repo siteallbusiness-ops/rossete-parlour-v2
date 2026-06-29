@@ -34,10 +34,10 @@ export const LANDING_IMAGES = {
     },
   ],
   about: {
-    src: "/images/about-kitchen.jpg",
-    alt: "Desserts being freshly prepared in the kitchen for delivery and collection orders",
-    width: 768,
-    height: 1024,
+    src: "/images/about.jpg",
+    alt: "Rossete Parlour desserts and gifting — handcrafted treats for delivery and collection",
+    width: 1024,
+    height: 613,
   },
   gallery: GALLERY_ITEMS,
 };
