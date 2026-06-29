@@ -35,21 +35,29 @@ function getLondonParts(date = new Date()) {
   };
 }
 
-function parseTime12(value) {
-  const match = value.trim().match(/^(\d{1,2}):(\d{2})\s*(AM|PM)$/i);
-  if (!match) return null;
+function parseTime(value) {
+  const text = value.trim();
+  const match12 = text.match(/^(\d{1,2}):(\d{2})\s*(AM|PM)$/i);
+  if (match12) {
+    let hours = Number(match12[1]);
+    const minutes = Number(match12[2]);
+    const period = match12[3].toUpperCase();
 
-  let hours = Number(match[1]);
-  const minutes = Number(match[2]);
-  const period = match[3].toUpperCase();
+    if (period === "AM") {
+      if (hours === 12) hours = 0;
+    } else if (hours !== 12) {
+      hours += 12;
+    }
 
-  if (period === "AM") {
-    if (hours === 12) hours = 0;
-  } else if (hours !== 12) {
-    hours += 12;
+    return hours * 60 + minutes;
   }
 
-  return hours * 60 + minutes;
+  const match24 = text.match(/^(\d{1,2}):(\d{2})$/);
+  if (match24) {
+    return Number(match24[1]) * 60 + Number(match24[2]);
+  }
+
+  return null;
 }
 
 export function parseHoursRange(hoursText) {
@@ -60,8 +68,8 @@ export function parseHoursRange(hoursText) {
   }
 
   const [openText, closeText] = text.split("-").map((part) => part.trim());
-  const openMinutes = parseTime12(openText);
-  const closeMinutes = parseTime12(closeText);
+  const openMinutes = parseTime(openText);
+  const closeMinutes = parseTime(closeText);
 
   if (openMinutes === null || closeMinutes === null) {
     return { type: "closed" };

@@ -1,20 +1,25 @@
 "use client";
 
-import { useState } from "react";
 import SitePageLayout from "@/components/Layout/SitePageLayout";
-import { SITE, WORKING_HOURS } from "@/constants/site";
+import {
+  SITE,
+  OPENING_HOURS,
+  DELIVERY_HOURS,
+  WORKING_HOURS,
+} from "@/constants/site";
 import styles from "./ContactPage.module.css";
 
 export default function ContactPage() {
-  const [hoursType, setHoursType] = useState("delivery");
-  const hours = WORKING_HOURS[hoursType];
+  const weeklyHours = WORKING_HOURS.delivery;
 
   return (
     <SitePageLayout>
       <div className={styles.page}>
         <div className={styles.card}>
           <h1 className={styles.title}>Contact us</h1>
-          <p className={styles.subtitle}>Find us here</p>
+          <p className={styles.subtitle}>
+            Delivery and collection only — no dine-in
+          </p>
 
           <div className={styles.infoBox}>
             <div className={styles.infoCol}>
@@ -36,30 +41,34 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <h2 className={styles.hoursTitle}>Working hours:</h2>
+          <div className={styles.hoursGrid}>
+            <section className={styles.hoursCard} aria-labelledby="opening-hours">
+              <h2 id="opening-hours" className={styles.hoursCardTitle}>
+                Opening times
+              </h2>
+              <p className={styles.hoursSummary}>{OPENING_HOURS.weekday}</p>
+              <p className={styles.hoursSummary}>{OPENING_HOURS.weekend}</p>
+            </section>
 
-          <div className={styles.toggle}>
-            <button
-              type="button"
-              className={`${styles.toggleBtn} ${hoursType === "delivery" ? styles.toggleActive : ""}`}
-              onClick={() => setHoursType("delivery")}
-            >
-              Delivery
-            </button>
-            <button
-              type="button"
-              className={`${styles.toggleBtn} ${hoursType === "collection" ? styles.toggleActive : ""}`}
-              onClick={() => setHoursType("collection")}
-            >
-              Collection
-            </button>
+            <section className={styles.hoursCard} aria-labelledby="delivery-hours">
+              <h2 id="delivery-hours" className={styles.hoursCardTitle}>
+                Delivery times
+              </h2>
+              <p className={styles.hoursSummary}>{DELIVERY_HOURS.weekday}</p>
+              <p className={styles.hoursSummary}>{DELIVERY_HOURS.weekend}</p>
+            </section>
           </div>
 
+          <h2 className={styles.hoursTitle}>Hours by day</h2>
+          <p className={styles.hoursNote}>
+            Collection pickup follows the same hours as delivery.
+          </p>
+
           <ul className={styles.hoursList}>
-            {hours.map(({ day, hours: time }) => (
+            {weeklyHours.map(({ day, hours }) => (
               <li key={day}>
                 <span>{day}</span>
-                <span>{time}</span>
+                <span>{hours}</span>
               </li>
             ))}
           </ul>

@@ -34,10 +34,10 @@ export const LANDING_IMAGES = {
     },
   ],
   about: {
-    src: "/images/about.jpg",
-    alt: "Warm and welcoming restaurant interior at Rossete Parlour",
-    width: 1200,
-    height: 800,
+    src: "/images/about-kitchen.jpg",
+    alt: "Desserts being freshly prepared in the kitchen for delivery and collection orders",
+    width: 768,
+    height: 1024,
   },
   gallery: GALLERY_ITEMS,
 };
