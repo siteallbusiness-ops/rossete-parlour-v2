@@ -9,7 +9,7 @@ export const SITE = {
     "Rossete Parlour — handcrafted desserts for delivery and collection in Plymouth. Order online — no dine-in, just great food brought to you or ready to pick up.",
   url: "https://rosseteparlour.com",
   locale: "en_GB",
-  email: "hello@rosseteparlour.com",
+  email: "info@rosetteparlor.com",
   phone: "07389 169788",
   address: {
     street: "143 King St, Stonehouse",
